@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'waist_roll_joint', 'waist_yaw_joint', 'hipyaw_right_joint', 'hiproll_right_joint', 'hiproll_right_joint', 'kneepitch_right_joint', 'anklepitch_right_joint', 'right_end', 'hipyaw_left_joint', 'hiproll_left_joint', 'hippitch_left_joint', 'kneepitch_left_joint', 'anklepitch_left_joint', 'left_end', ]

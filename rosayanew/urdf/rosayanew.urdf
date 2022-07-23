@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rosayanew">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.306947562256316 0.180831346156515 -0.235861998931365"
+        rpy="0 0 0" />
+      <mass
+        value="0.219393180659538" />
+      <inertia
+        ixx="0.00010004950762791"
+        ixy="7.22920991582236E-08"
+        ixz="-6.78050760303754E-08"
+        iyy="0.000157044861745445"
+        iyz="7.9949089280851E-06"
+        izz="0.000172559948538812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.996078431372549 0.870588235294118 0.76078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="waist_link">
+    <inertial>
+      <origin
+        xyz="-0.0120033988283798 0.0177864888210415 -0.00598432615626335"
+        rpy="0 0 0" />
+      <mass
+        value="0.2530252141444" />
+      <inertia
+        ixx="6.88384358100404E-05"
+        ixy="1.45994634010128E-13"
+        ixz="-5.86676449969518E-13"
+        iyy="0.000207131359720109"
+        iyz="-1.37231915803419E-07"
+        izz="0.000198692963522096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/waist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.996078431372549 0.870588235294118 0.76078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/waist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_roll_joint"
+    type="revolute">
+    <origin
+      xyz="-0.29478 0.22738 0.061112"
+      rpy="1.5708 0.00053754 -0.00096153" />
+    <parent
+      link="base_link" />
+    <child
+      link="waist_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.1345"
+      upper="4.0143"
+      effort="2.5"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_link">
+    <inertial>
+      <origin
+        xyz="0.045659265971401 -0.0109874436586781 2.6747065720055E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.139103984517577" />
+      <inertia
+        ixx="3.83635317106231E-05"
+        ixy="-8.91501631202284E-13"
+        ixz="1.24256231838675E-12"
+        iyy="2.38932336791584E-05"
+        iyz="-1.82745083203461E-07"
+        izz="3.15364071298608E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="-0.057739 -0.0216 0.0044704"
+      rpy="1.5708 0.0011987 0" />
+    <parent
+      link="waist_link" />
+    <child
+      link="hip_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.309"
+      upper="3.6652"
+      effort="2.5"
+      velocity="0" />
+  </joint>
+  <link
+    name="hipyaw_right_link">
+    <inertial>
+      <origin
+        xyz="-0.00838599829268227 0.013118160719659 0.0118918013346213"
+        rpy="0 0 0" />
+      <mass
+        value="0.00951579267272955" />
+      <inertia
+        ixx="1.41796406965292E-06"
+        ixy="1.33317364146152E-11"
+        ixz="2.72466604711063E-13"
+        iyy="4.52777287280616E-06"
+        iyz="4.07417695055598E-12"
+        izz="4.84519368121065E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hipyaw_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hipyaw_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hipyaw_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.011879 0.015537 0.0236"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="hip_link" />
+    <child
+      link="hipyaw_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="2.5"
+      velocity="0" />
+  </joint>
+  <link
+    name="hiproll_right_link">
+    <inertial>
+      <origin
+        xyz="0.000304812182805536 -0.015386550233657 0.0317653464222177"
+        rpy="0 0 0" />
+      <mass
+        value="0.189174580115534" />
+      <inertia
+        ixx="7.59556311007545E-05"
+        ixy="-1.6209844739729E-07"
+        ixz="3.0305474763736E-12"
+        iyy="4.96123538313026E-05"
+        iyz="-1.95920998057281E-07"
+        izz="8.02606430077749E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hiproll_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hiproll_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hiproll_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.071738 0.0319 0.011893"
+      rpy="-1.5708 -1.5703 -1.5708" />
+    <parent
+      link="hipyaw_right_link" />
+    <child
+      link="hiproll_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10.6"
+      velocity="0" />
+  </joint>
+  <link
+    name="hippitch_right_link">
+    <inertial>
+      <origin
+        xyz="2.08787276276823E-05 -0.0349794020347895 -2.80136132935482E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181535516" />
+      <inertia
+        ixx="3.65640945537559E-05"
+        ixy="1.06282733016621E-06"
+        ixz="2.3103234966177E-09"
+        iyy="2.89113990297343E-05"
+        iyz="-7.60422939043392E-09"
+        izz="4.93830312783972E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hippitch_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hippitch_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hiproll_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0001 -0.05633 0.05622"
+      rpy="0 0 0" />
+    <parent
+      link="hiproll_right_link" />
+    <child
+      link="hippitch_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10.6"
+      velocity="0" />
+  </joint>
+  <link
+    name="kneepitch_right_link">
+    <inertial>
+      <origin
+        xyz="0.0278887126914155 0.015100648472193 0.0520353980009107"
+        rpy="0 0 0" />
+      <mass
+        value="0.019358226861366" />
+      <inertia
+        ixx="1.54337755283822E-05"
+        ixy="4.16144873571443E-06"
+        ixz="-2.11117442947292E-16"
+        iyy="3.00375986139604E-05"
+        iyz="1.3440399804828E-16"
+        izz="2.14370365193728E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/kneepitch_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/kneepitch_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kneepitch_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.052 -0.11807 0.02443"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="hippitch_right_link" />
+    <child
+      link="kneepitch_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+  <link
+    name="anklepitch_right_link">
+    <inertial>
+      <origin
+        xyz="0.00567317888375546 -0.0257156025337531 0.027388092396229"
+        rpy="0 0 0" />
+      <mass
+        value="0.179157163367396" />
+      <inertia
+        ixx="6.2004999767118E-05"
+        ixy="7.51338233265618E-07"
+        ixz="1.41205104046991E-05"
+        iyy="7.45909784988211E-05"
+        iyz="-7.49407108094131E-07"
+        izz="5.98575734823856E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/anklepitch_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/anklepitch_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="anklepitch_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033429 0.02443 0.0778"
+      rpy="1.5708 0 2.3562" />
+    <parent
+      link="kneepitch_right_link" />
+    <child
+      link="anklepitch_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+  <link
+    name="angkleroll_right_link">
+    <inertial>
+      <origin
+        xyz="-1.10045508816548E-09 -0.000938379078780305 -0.00784812984679401"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331350749" />
+      <inertia
+        ixx="3.33197131957481E-05"
+        ixy="6.38168248520781E-15"
+        ixz="2.71099083064066E-14"
+        iyy="0.000132875198487612"
+        iyz="1.64842453154727E-12"
+        izz="0.000102630001589937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/angkleroll_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/angkleroll_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_end"
+    type="revolute">
+    <origin
+      xyz="0.016984 -0.0258 -0.02308"
+      rpy="1.5708 -0.7854 0" />
+    <parent
+      link="anklepitch_right_link" />
+    <child
+      link="angkleroll_right_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+  <link
+    name="hipyaw_left_link">
+    <inertial>
+      <origin
+        xyz="-0.00778142425325382 0.014545720571261 0.0118929909746986"
+        rpy="0 0 0" />
+      <mass
+        value="0.00873008666123984" />
+      <inertia
+        ixx="1.39480445278502E-06"
+        ixy="1.3175032889771E-11"
+        ixz="2.24130554117765E-14"
+        iyy="4.48325716719759E-06"
+        iyz="3.9175010276383E-12"
+        izz="4.82203406699595E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hipyaw_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hipyaw_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hipyaw_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.07944 0.015537 0.0236"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="hip_link" />
+    <child
+      link="hipyaw_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="2.5"
+      velocity="0" />
+  </joint>
+  <link
+    name="hiproll_left_link">
+    <inertial>
+      <origin
+        xyz="-0.000304805225546378 -0.0153865430621968 -0.0244546533014944"
+        rpy="0 0 0" />
+      <mass
+        value="0.189174580115534" />
+      <inertia
+        ixx="7.59556311007334E-05"
+        ixy="1.61668649292748E-07"
+        ixz="3.07184673367949E-12"
+        iyy="4.96123538313235E-05"
+        iyz="-1.95920870251635E-07"
+        izz="8.02606430077748E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hiproll_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hiproll_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hiproll_left_joint"
+    type="revolute">
+    <origin
+      xyz="-0.015518 0.0319 0.011893"
+      rpy="-1.5708 -1.5703 -1.5708" />
+    <parent
+      link="hipyaw_left_link" />
+    <child
+      link="hiproll_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10.6"
+      velocity="0" />
+  </joint>
+  <link
+    name="hippitch_left_link">
+    <inertial>
+      <origin
+        xyz="3.43481025328329E-05 -0.0215205979615125 2.08800832954825E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181499381" />
+      <inertia
+        ixx="4.93830312738174E-05"
+        ixy="-1.08850895861872E-08"
+        ixz="2.31025007795923E-09"
+        iyy="2.89113990277142E-05"
+        iyz="-1.06282713319469E-06"
+        izz="3.65640945484382E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hippitch_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/hippitch_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hippitch_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.0001 -0.11283 -0.00055805"
+      rpy="-1.5708 1.5659 1.5708" />
+    <parent
+      link="hiproll_left_link" />
+    <child
+      link="hippitch_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10.6"
+      velocity="0" />
+  </joint>
+  <link
+    name="kneepitch_left_link">
+    <inertial>
+      <origin
+        xyz="0.0278887116480027 0.0151006504025528 0.0520353980000031"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613659" />
+      <inertia
+        ixx="1.543377495228E-05"
+        ixy="4.16144772485331E-06"
+        ixz="-1.54278105816216E-19"
+        iyy="3.00375991900622E-05"
+        iyz="1.86855964472666E-20"
+        izz="2.14370365193727E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/kneepitch_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/kneepitch_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kneepitch_left_joint"
+    type="revolute">
+    <origin
+      xyz="-0.024752 0.061442 -0.052071"
+      rpy="0 0 -1.5655" />
+    <parent
+      link="hippitch_left_link" />
+    <child
+      link="kneepitch_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+  <link
+    name="anklepitch_left_link">
+    <inertial>
+      <origin
+        xyz="0.0230327225645484 -0.0152518011598849 -8.03501064945422E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.180365939634211" />
+      <inertia
+        ixx="7.5189753481642E-05"
+        ixy="1.07043118164786E-06"
+        ixz="-1.36539040185384E-09"
+        iyy="4.68805619815627E-05"
+        iyz="-1.06446725690033E-06"
+        izz="7.46607644099228E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/anklepitch_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/anklepitch_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="anklepitch_left_joint"
+    type="revolute">
+    <origin
+      xyz="-0.033429 0.02443 0.052071"
+      rpy="0 0 1.5705" />
+    <parent
+      link="kneepitch_left_link" />
+    <child
+      link="anklepitch_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+  <link
+    name="angkleroll_left_link">
+    <inertial>
+      <origin
+        xyz="0.00862278550920814 0.00106162091787543 -0.0577888207345594"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331350737" />
+      <inertia
+        ixx="3.33197131957482E-05"
+        ixy="-8.05973516420444E-16"
+        ixz="2.70913544674232E-14"
+        iyy="0.000132875198487611"
+        iyz="1.64763668459555E-12"
+        izz="0.000102630001589936" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/angkleroll_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosayanew/meshes/angkleroll_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_end"
+    type="revolute">
+    <origin
+      xyz="-0.012933 0.03033 -0.065637"
+      rpy="3.1416 0 0" />
+    <parent
+      link="anklepitch_left_link" />
+    <child
+      link="angkleroll_left_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="8.4"
+      velocity="0" />
+  </joint>
+</robot>
